@@ -1,0 +1,42 @@
+Project #8 - Submission form
+
+Brian Knott
+
+Story number and name: 1) Extend user profile detail with usage
+Story points: 3
+Brief description to see the story in action:
+Thumbnails appear at the bottom of each user’s user-detail page. These thumbnails are links to the photo page.
+
+Story number and name: 4) Visibility control of photos
+Story points: 4
+Brief description to see the story in action:
+When uploading a photo, a prompt will ask the user to enter names. Blank corresponds to “Everyone” can view, otherwise only the user and the given names can view the photo. Names must follow /[A-Za-z]+ [A-Za-z]+/ with whitespace around the names ignored (trim is used). The user does not have to exist for a name to be given permission.
+
+Story number and name: 6) Deleting comments, photos, and users
+Story points: 4
+Brief description to see the story in action:
+User may only delete items they own, deleting account requires confirmation and will delete all associated items.
+
+Story number and name: 7) Photo like votes
+Story points: 4
+Brief description to see the story in action:
+Like buttons turn blue when a user likes them, then black again when unliked. Photos keep track of who has liked them. On the photo page, photos are sorted from most likes to least likes.
+
+Story number and name: 2) Full text search of photos by comment text
+Story points: 6
+Brief description to see the story in action:
+Search toolbar is at the top. It can be used by clicking search or pressing enter while in the toolbar. Search is case insensitive and is not tokenized (searching ‘with’ will return comments with the word ‘without’).
+
+
+Total Story Points: 21
+
+Marketing Video URL (ensure permissions are set to public viewing):
+https://youtu.be/i0MfAwlWkqc
+
+Is it OK with you if we post your Marketing Video URL on the class discussion forum?
+Yes
+
+Any special instructions for Grading (should be easy to run app from new machine):
+None -
+
+The Youtube video is about 10 minutes. It is a pretty detailed demonstration, please read the description for tl;dr. I apologize for the length as the screen captures took longer than expected and I did not see the 2 minute criteria.

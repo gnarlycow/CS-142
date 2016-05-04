@@ -1,0 +1,25 @@
+<div ng-show="loggedIn" id="padding">
+	Searching for <span id="search"> "{{param}}" </span> in photo comments.
+
+	<div ng-if="photoList.length === 0"> No results found. </div> 
+	<div ng-repeat="photo in photoList">
+		<div ng-repeat="c in photo.comments">
+			<div ng-show="contains(c.comment)">
+				<div class="container" flex layout="row">
+		
+        		    <md-sidenav md-is-locked-open="true" id="left">
+        		    	<a ng-href="photo-share.html#/photos/{{photo.user.id}}#{{photo.id}}">
+							<img ng-src="images/{{photo.file_name}}" class="thumb" alt="photo" >
+						</a>
+        		    </md-sidenav>
+        		    <div id="right">
+        		    	<div> Owner: {{photo.user.first_name}} {{photo.user.last_name}} </div>
+        		    	<div> Commentor: {{c.user.first_name}} {{c.user.last_name}} </div>
+        		    	<div> Comment: {{c.comment}} </div>
+        		    </div>
+		
+        		</div>
+        	</div>
+        </div>
+	</div>
+</div>

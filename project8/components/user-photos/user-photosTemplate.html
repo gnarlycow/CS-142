@@ -1,0 +1,57 @@
+<div id="padding">
+
+	<div id="name">
+		{{user.first_name}} {{user.last_name}}
+	</div>
+   <div ng-if="userPhotos.length === 0"> This user does not have any photos. </div>
+	<div ng-repeat="photo in userPhotos">
+		<md-card ng-attr-id="{{photo.id}}">
+ 			<img ng-src="images/{{photo.file_name}}" class="md-card-image" alt="photo" >
+
+
+ 			<md-card-content>
+ 				<div id="date"> {{photo.date_time}} 
+            <span id="deletePhoto" ng-show="deletablePhoto(photo)"> <button ng-click="deletePhoto(photo)"> Delete Photo </button> </span>
+         </div>
+               <form ng-submit="Like()" ng-controller="UserPhotosController">
+                  <input ng-if="photo.likes.indexOf(uid) !== -1" type="submit" id="liked" value="{{photo.likes.length}} {{plural(photo.likes.length)}}" />
+                  <input ng-if="photo.likes.indexOf(uid) === -1" type="submit" id="like" value="{{photo.likes.length}} {{plural(photo.likes.length)}}" />
+               </form>
+   				<md-card ng-repeat="c in photo.comments">
+   					<md-card-content>
+   						<div id="cName">
+   							{{c.user.first_name}} {{c.user.last_name}}
+   						</div>
+   						<div id="cCom">
+   							{{c.comment}}
+   						</div>
+   					</md-card-content>
+   					<md-card-footer id="date">
+   						{{c.date_time}}
+                     <span id="deleteComment" ng-show="deletableComment(c)"> 
+                        <button ng-click="deleteComment(photo, c)"> Delete Comment </button> 
+                     </span>
+   					</md-card-footer>
+   				</md-card>
+
+               <span id="visibility"> Visible to: 
+                  <span ng-if="photo.vis_perms.length === 0" id="visibility"> Everyone </span>
+                  <span ng-if="photo.vis_perms.length === 1 && photo.vis_perms[0].length === 0" id="visibility"> Everyone </span>
+                  <span ng-if="photo.vis_perms.length !== 0" ng-repeat="perm in photo.vis_perms" id="visibility"> 
+                     {{perm}} {{$last ? '' : ','}} 
+                  </span> 
+               </span>
+ 			</md-card-content>
+
+
+ 			<md-card-footer>
+   				<form ng-submit="addComment()" ng-controller="UserPhotosController">
+                  <div> 
+                     <input type="text" id="cid" ng-model="com" placeholder="Add Comment..." ng-minlength="1"/> 
+                     <input type="submit" id="submit" value="Add" /> 
+                  </div>
+               </form>
+ 			</md-card-footer>
+		</md-card>
+	</div>
+</div>

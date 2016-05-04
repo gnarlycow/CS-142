@@ -1,0 +1,61 @@
+
+<table class="colors">
+	<tr>
+		<td class="red"/>
+		<td class="white"/>
+		<td class="blue"/>
+		<td class="gray"/>
+		<td class="green"/>
+		<td class="yellow"/>
+		<td class="black"/>
+		<td class="pink"/>
+		<td class="teal"/>
+		<td class="brown"/>
+	</tr>
+	<tr>
+		<td class="white"/>
+		<td class="blue"/>
+		<td class="gray"/>
+		<td class="green"/>
+		<td class="yellow"/>
+		<td class="black"/>
+		<td class="pink"/>
+		<td class="teal"/>
+		<td class="brown"/>
+		<td class="red"/>
+	</tr>
+	<tr>
+		<td class="blue"/>
+		<td class="gray"/>
+		<td class="green"/>
+		<td class="yellow"/>
+		<td class="black"/>
+		<td class="pink"/>
+		<td class="teal"/>
+		<td class="brown"/>
+		<td class="red"/>
+		<td class="white"/>
+	</tr>
+	<tr>
+		<td class="gray"/>
+		<td class="green"/>
+		<td class="yellow"/>
+		<td class="black"/>
+		<td class="pink"/>
+		<td class="teal"/>
+		<td class="brown"/>
+		<td class="red"/>
+		<td class="white"/>
+		<td class="blue"/>
+	</tr>
+</table>
+
+<label class="states-input">Substring: <input type="text" ng-model="substr"></label>
+
+<div ng-repeat = "state in validStates(substr)">
+	{{state}}
+</div>
+
+
+
+

@@ -1,0 +1,26 @@
+<div id="padding">
+
+	<form ng-submit="submit()" ng-controller="LoginRegisterController">
+  		Enter your username and password:
+		<div id="Error"> </div>
+  		<div> <input type="text" id="ln" ng-model="ln" placeholder="Username" ng-minlength="1"/> </div>
+  		<div> <input type="password" id="pwd" ng-model="pwd" placeholder="Password" ng-minlength="1"/> </div>
+  		<div> <input type="submit" id="submit" value="Sign In" /> </div>
+	</form>
+
+	<form ng-submit="register()" ng-controller="LoginRegisterController">
+  		Register a new user: 
+  		<div id="RegError"> </div>
+  		<div> <input type="text" id="username" ng-model="login_name" placeholder="Username*" ng-minlength="1"/> </div>
+  		<div> <input type="password" id="pass" ng-model="password" placeholder="Password*" ng-minlength="1"/> </div>
+  		<div> <input type="text" id="first" ng-model="first_name" placeholder="First Name*" ng-minlength="1"/> </div>
+  		<div> <input type="text" id="last" ng-model="last_name" placeholder="Last Name*" ng-minlength="1"/> </div>
+  		<div> <input type="text" ng-model="loc" placeholder="Location" ng-minlength="1"/> </div>
+  		<div> <input type="text" ng-model="desc" placeholder="Description" ng-minlength="1"/> </div>
+  		<div> <input type="text" ng-model="occupation" placeholder="Occupation" ng-minlength="1"/> </div>
+  		<div id="required"> * Required field </div>
+
+  		<div> <input type="submit" id="register" value="Register Me" /> </div>
+	</form>
+
+</div>

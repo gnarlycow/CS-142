@@ -1,0 +1,37 @@
+<div id="padding">
+
+	<div id="name">
+		{{user.first_name}} {{user.last_name}}
+	</div>
+
+	<div ng-repeat="photo in userPhotos">
+		<md-card>
+ 			<img ng-src="images/{{photo.file_name}}" class="md-card-image" alt="photo">
+
+
+ 			<md-card-content>
+
+ 				<div id="date"> {{photo.date_time}}</div>
+   				<md-card ng-repeat="c in photo.comments">
+   					<md-card-content>
+   						<div id="cName">
+   							{{c.user.first_name}} {{c.user.last_name}}
+   						</div>
+   						<div id="cCom">
+   							{{c.comment}}
+   						</div>
+   					</md-card-content>
+   					<md-card-footer id="date">
+   						{{c.date_time}}
+   					</md-card-footer>
+   				</md-card>
+
+ 			</md-card-content>
+
+
+ 			<md-card-footer>
+   				<ng-button></ng-button>
+ 			</md-card-footer>
+		</md-card>
+	</div>
+</div>

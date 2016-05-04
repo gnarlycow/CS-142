@@ -1,0 +1,48 @@
+<div id="padding">
+
+	<div id="name">
+		{{user.first_name}} {{user.last_name}}
+
+    	<span id="deleteUser" ng-show="deletable()"> 
+    	   <button ng-click="deleteUser()"> Delete User </button> 
+    	</span>
+	</div>
+	<div id="location">
+		{{user.occupation}} from {{user.location}}
+	</div>
+	<div id="description">
+		Description: <br><br>
+		{{user.description}}
+		<!-- Per @360, this does not need to markup <i> CS 142 </i> -->
+	</div>
+	<a id="photos" ng-href="photo-share.html#/photos/{{user.id}}">Photos</a>
+
+	<div flex layout="row">
+      	<md-sidenav md-is-locked-open="true" id="left">
+      	    <div ng-if="latest === null" class="gray"> No&nbsp;available&nbsp;photos. </div>
+				<span ng-if="latest != null" class="gray">
+				Most&nbsp;recent&nbsp;photo:
+				<div> 
+					<a ng-href="photo-share.html#/photos/{{user.id}}#{{latest.id}}"> 
+						<img ng-src="images/{{latest.file_name}}" class="thumb" alt="photo"> 
+					</a> 
+				</div>
+			<div class="gray"> Uploaded {{latest.date_time}} </div>
+		</span>
+      	</md-sidenav>
+      	<div id="right">
+      	    <span ng-if="popular != null" class="gray">
+				Most popular photo:
+				<div> 
+					<a ng-href="photo-share.html#/photos/{{user.id}}#{{popular.id}}"> 
+						<img ng-src="images/{{popular.file_name}}" class="thumb" alt="photo"> 
+					</a> 
+				</div>
+				<div class="gray"> {{popular.comments.length}} {{plural(popular.comments.length)}} </div>
+			</span>
+      	</div>
+		
+		
+	</div>
+
+</div>

@@ -1,0 +1,43 @@
+#name{
+	font-size: 6vw;
+	color: #410b68;
+}
+
+#location{
+	padding-bottom: 5vh;
+	font-size: 2vw;
+}
+#description, #photos{
+	font-size: 2vw;
+}
+
+#padding{
+	font-family: "Times New Roman", Georgia, Serif;
+	padding-left: 10px;
+}
+
+.thumb{
+	width: 150px;
+	height: 150px;
+}
+
+.gray{
+	font-size: 10pt;
+	color: gray;
+}
+
+
+#left{
+	padding-right: 100px;
+}
+
+#right{
+	padding-left: 100px;
+}
+
+#deleteUser{
+	float: right;
+	font-size: 16pt;
+	padding-right: 60px;
+	padding-top: 20px;
+}

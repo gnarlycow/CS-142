@@ -1,0 +1,71 @@
+.yellow{
+	background-color: yellow;
+	width: 10%;
+	padding: 10px;
+}
+
+.red{
+	background-color: red;
+	width: 10%;
+	padding: 10px;
+}
+
+.green{
+	background-color: green;
+	width: 10%;
+	padding: 10px;
+}
+
+.gray{
+	background-color: gray;
+	width: 10%;
+	padding: 10px;
+}
+
+.black{
+	background-color:black;
+	width: 10%;
+	padding: 10px;
+}
+
+.pink{
+	background-color: #ff00ff;
+	width: 10%;
+	padding: 10px;
+}
+
+.teal{
+	background-color: #6600ff;
+	width: 10%;
+	padding: 10px;
+}
+
+.brown{
+	background-color: #663300;
+	width: 10%;
+	padding: 10px;
+}
+
+.blue{
+	background-color: blue;
+	width: 10%;
+	padding: 10px;
+}
+
+.white{
+	background-color: white;
+	width: 10%;
+	padding: 10px;
+}
+
+.colors{
+	border-spacing: 0;
+	width: 100%;
+}
+
+/*
+CSS for the CS142 project #4 Problem #2 states component
+
+Since CSS uses a global name space for classes we should use names starting with
+cs142-states- here.
+*/

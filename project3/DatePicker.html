@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+	<link rel="stylesheet" type="text/css" href="datepicker.css">
+	
+	<body>
+		<div id="div1"> </div>
+		<div id="div2"> </div>
+
+		<script type="text/javascript" src="DatePicker.js"> </script>
+		<script type="text/javascript">
+			// DatePicker for first div // 
+			var dp1 = new DatePicker("div1",function (id, fixedDate) {
+   					console.log("DatePicker with id", id, "selected date:", fixedDate.month + "/" + fixedDate.day + "/" + fixedDate.year);
+					});
+			dp1.render(new Date());
+
+			// DatePicker for second div //
+			var dp2 = new DatePicker("div2",function (id, fixedDate) {
+   					console.log("DatePicker with id", id, "selected date:", fixedDate.month + "/" + fixedDate.day + "/" + fixedDate.year);
+					});
+			dp2.render(new Date("January 28, 2009")); 
+
+
+		</script>
+
+	</body>
+</html>

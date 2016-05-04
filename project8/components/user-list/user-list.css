@@ -1,0 +1,11 @@
+#list{
+	color: yellow;
+	font-size: 2.5vw;
+}
+
+a{
+	color: green;
+}
+a:hover{
+	color: #e5003e;
+}

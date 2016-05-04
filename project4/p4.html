@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html ng-app="cs142App" ng-controller="MainController">
+    <head>
+        <!-- Add Angular -->
+        <script src="node_modules/angular/angular.js"></script>
+
+        <script src="mainController.js"></script>
+    	<script src="modelData/states.js"></script>
+        <script src="modelData/example.js"></script>
+        <script src="components/example/exampleController.js"> </script>
+        <script src="components/states/statesController.js"></script>
+
+    	<script src="p4controller.js" > </script>
+
+
+        <link rel="stylesheet" type="text/css" href="main.css" />
+
+        <!--Include the controllers and models for all the view templates we are using.  Currently
+        that is only the example component.-->
+        <link rel="stylesheet" type="text/css" href="components/example/example.css" />
+    	<link rel="stylesheet" type="text/css" href="components/states/states.css" />
+
+    </head>
+    <body>
+        <div class="header"></div> <!-- Your problem #1 header widget goes here-->
+        <!--Include the example view template in this div. This will result in the
+        controller (ExampleController) being started and the template inserted and
+        filled in into the DOM.-->
+        <div ng-include="'p4Template.html'" ng-controller="p4controller"></div>
+    </body>
+</html>

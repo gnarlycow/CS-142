@@ -1,0 +1,48 @@
+#name{
+	font-size: 6vw;
+	color: #410b68;
+}
+
+#padding{
+	font-family: "Times New Roman", Georgia, Serif;
+	padding-left: 10px;
+}
+
+#date{
+	font-size: 10pt;
+}
+#cName{
+	font-size: 14pt;
+	color: black;
+	font-weight: bold;
+}
+
+md-card{
+	width: 90%;
+}
+
+#cCom{
+	font-size: 10pt;
+}
+
+#cid{
+	width: 50%;
+}
+
+#visibility{
+	font-size: 10pt;
+	color: gray;
+}
+
+#like {
+	color: black;
+}
+
+#liked{
+	color: blue;
+}
+
+#deletePhoto, #deleteComment{
+	float: right;
+	font-size: 14pt;
+}
